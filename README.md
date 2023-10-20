@@ -1,1 +1,1 @@
-# easy-regx
+# Easy Regx
