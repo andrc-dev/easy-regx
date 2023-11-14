@@ -32,11 +32,12 @@ public class Controller {
     private Button generateButton;
 
     @FXML
-    public void setCloseButtonStyleOnEnter() {
+    public void setCloseButtonStyleOnHover() {
         closeButton.setStyle("-fx-background-color: red");
     }
 
-    public void setButtonStyleOnMouseExit() {
+    @FXML
+    public void setCloseButtonStyleOnDefault() {
         closeButton.setStyle("-fx-background-color: #1A1A1A");
     }
 
