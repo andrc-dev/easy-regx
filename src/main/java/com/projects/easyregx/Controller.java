@@ -30,17 +30,7 @@ public class Controller {
     private Button spaceButton;
     @FXML
     private Button generateButton;
-
-    @FXML
-    public void setCloseButtonStyleOnHover() {
-        closeButton.setStyle("-fx-background-color: red");
-    }
-
-    @FXML
-    public void setCloseButtonStyleOnDefault() {
-        closeButton.setStyle("-fx-background-color: #1A1A1A");
-    }
-
+    
     @FXML
     public void close() {
         javafx.application.Platform.exit();
