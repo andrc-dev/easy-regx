@@ -30,7 +30,7 @@ public class Controller {
     private Button spaceButton;
     @FXML
     private Button generateButton;
-    
+
     @FXML
     public void close() {
         javafx.application.Platform.exit();
