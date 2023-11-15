@@ -9,7 +9,7 @@
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="600.0" style="-fx-background-color: #1E1E1E;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.projects.easyregx.Controller">
     <children>
         <Button fx:id="closeButton" layoutX="565.0" mnemonicParsing="false" onMouseClicked="#close" prefHeight="35.0" prefWidth="35.0" styleClass="closeBtn" stylesheets="@styles.css" text="X" textAlignment="CENTER" />
-        <Button fx:id="minimizeButton" layoutX="530.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0" styleClass="minimizeBtn" stylesheets="@styles.css"  text="-" textAlignment="CENTER" />
+        <Button fx:id="minimizeButton" layoutX="530.0" mnemonicParsing="false" onMouseClicked="#minimize" prefHeight="35.0" prefWidth="35.0" styleClass="minimizeBtn" stylesheets="@styles.css"  text="-" textAlignment="CENTER" />
         <TextField fx:id="outputBox" layoutX="80.0" layoutY="73.0" prefHeight="40.0" prefWidth="380.0" promptText="your regex will appear here" style="-fx-background-color: #1A1A1A;" />
         <Button fx:id="copyButton" layoutX="460.0" layoutY="73.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #1E1E1E; -fx-border-color: gray; -fx-text-fill: #4F4F4F;" text="cp" />
         <Text fx:id="logo" fill="#ff8a00" layoutX="14.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ERx" textAlignment="CENTER">
