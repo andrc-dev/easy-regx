@@ -21,3 +21,9 @@
     -fx-text-fill: #2E2E2E;
     -fx-background-radius: 0;
 }
+
+// Output Box
+.outputBox {
+    -fx-background-color: #1A1A1A;
+    -fx-text-fill: cyan;
+}
