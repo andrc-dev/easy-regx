@@ -5,8 +5,8 @@
     -fx-background-radius: 0;
 }
 .closeBtn:hover {
-    -fx-background-color: red;
-    -fx-text-fill: #2E2E2E;
+    -fx-background-color: #E33333;
+    -fx-text-fill: #8C1C1C;
     -fx-background-radius: 0;
 }
 
@@ -17,13 +17,55 @@
     -fx-background-radius: 0;
 }
 .minimizeBtn:hover {
-    -fx-background-color: white;
-    -fx-text-fill: #2E2E2E;
+    -fx-background-color: #DEDEDE;
+    -fx-text-fill: #4E4E4E;
     -fx-background-radius: 0;
 }
 
 // Output Box
 .outputBox {
     -fx-background-color: #1A1A1A;
-    -fx-text-fill: cyan;
+    -fx-text-fill: #9BF9FF;
+    //-fx-border-color: #4F4F4F;
+    //-fx-border-width: 1;
+    //-fx-border-style: segments(10, 15, 10, 15)  line-cap round;
+}
+
+// Copy Button
+.copyBtn {
+    -fx-background-color: #1E1E1E;
+    -fx-text-fill: #4F4F4F;
+    -fx-border-color: #4F4F4F;
+    -fx-background-radius: 0;
+}
+.copyBtn:pressed {
+    -fx-background-color: #0E0E0E;
+    -fx-text-fill: #2F2F2F;
+    //-fx-border-radius: 0;
+}
+
+// Input Buttons
+.inputBtn {
+    -fx-background-color: #1E1E1E;
+    -fx-border-color: #4F4F4F;
+    -fx-border-radius: 5px;
+    -fx-text-fill: #4F4F4F;
+}
+.inputBtn:pressed {
+    -fx-background-color: #1A1A1A;
+    -fx-border-color: #2E2E2E;
+    -fx-background-radius: 5px;
+    -fx-text-fill: #9BF9FF;
+}
+
+// Generate Button
+.generateBtn {
+    -fx-background-color: #9BF9FF;
+    -fx-background-radius: 5px;
+    -fx-text-fill: #1E1E1E;
+}
+.generateBtn:pressed {
+    -fx-background-color: #1A1A1A;
+    -fx-background-radius: 5px;
+    -fx-text-fill: #9BF9FF;
 }
