@@ -8,6 +8,7 @@ import javafx.stage.Stage;
 
 public class Controller {
 
+    // Current position of the stage
     private double posX = 0;
     private double posY = 0;
 

@@ -14,7 +14,7 @@
                 <Font name="System Bold" size="18.0" />
             </font>
         </Text>
-        <HBox fx:id="hBox" alignment="CENTER_RIGHT" onDragDetected="#handleStageDrag" prefHeight="35.0" prefWidth="600.0">
+        <HBox fx:id="hBox" alignment="CENTER_RIGHT" onMouseEntered="#handleStageDrag" prefHeight="35.0" prefWidth="600.0">
             <children>
                 <Button fx:id="minimizeButton" alignment="CENTER" mnemonicParsing="false" onMouseClicked="#minimize" prefHeight="35.0" prefWidth="35.0" styleClass="minimizeBtn" stylesheets="@styles.css" text="-" textAlignment="CENTER">
                 </Button>
