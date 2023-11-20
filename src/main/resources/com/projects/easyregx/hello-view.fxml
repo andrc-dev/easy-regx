@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.*?>
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0"
-            prefWidth="600.0" style="-fx-background-color: #1E1E1E;" xmlns="http://javafx.com/javafx/21"
+            prefWidth="600.0" styleClass="root" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/21"
             xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.projects.easyregx.Controller">
     <children>
         <Text fx:id="logo" accessibleRole="IMAGE_VIEW" fill="#ff8a00" layoutX="10.0" layoutY="24.0" strokeType="OUTSIDE"
@@ -19,16 +19,10 @@
                 <Button fx:id="minimizeButton" alignment="CENTER" mnemonicParsing="false" onMouseClicked="#minimize"
                         prefHeight="35.0" prefWidth="35.0" styleClass="minimizeBtn" stylesheets="@styles.css" text="-"
                         textAlignment="CENTER">
-                    <font>
-                        <Font name="System Bold" size="16.0"/>
-                    </font>
                 </Button>
                 <Button fx:id="closeButton" alignment="CENTER" mnemonicParsing="false" onMouseClicked="#close"
                         prefHeight="35.0" prefWidth="35.0" styleClass="closeBtn" stylesheets="@styles.css" text="x"
                         textAlignment="CENTER">
-                    <font>
-                        <Font name="System Bold" size="16.0"/>
-                    </font>
                 </Button>
             </children>
         </HBox>
