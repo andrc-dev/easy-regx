@@ -1,69 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
-<?import javafx.scene.text.*?>
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0"
-            prefWidth="600.0" styleClass="root" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/21"
-            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.projects.easyregx.Controller">
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="600.0" styleClass="root" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.projects.easyregx.Controller">
     <children>
-        <Text fx:id="logo" accessibleRole="IMAGE_VIEW" fill="#ff8a00" layoutX="10.0" layoutY="24.0" strokeType="OUTSIDE"
-              strokeWidth="0.0" text="ERx" textAlignment="CENTER">
+        <Text fx:id="logo" accessibleRole="IMAGE_VIEW" fill="#ff8a00" layoutX="10.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ERx" textAlignment="CENTER">
             <font>
-                <Font name="System Bold" size="18.0"/>
+                <Font name="System Bold" size="18.0" />
             </font>
         </Text>
-        <HBox alignment="CENTER_RIGHT" prefHeight="35.0" prefWidth="600.0">
+        <HBox fx:id="hBox" alignment="CENTER_RIGHT" onDragDetected="#handleStageDrag" prefHeight="35.0" prefWidth="600.0">
             <children>
-                <Button fx:id="minimizeButton" alignment="CENTER" mnemonicParsing="false" onMouseClicked="#minimize"
-                        prefHeight="35.0" prefWidth="35.0" styleClass="minimizeBtn" stylesheets="@styles.css" text="-"
-                        textAlignment="CENTER">
+                <Button fx:id="minimizeButton" alignment="CENTER" mnemonicParsing="false" onMouseClicked="#minimize" prefHeight="35.0" prefWidth="35.0" styleClass="minimizeBtn" stylesheets="@styles.css" text="-" textAlignment="CENTER">
                 </Button>
-                <Button fx:id="closeButton" alignment="CENTER" mnemonicParsing="false" onMouseClicked="#close"
-                        prefHeight="35.0" prefWidth="35.0" styleClass="closeBtn" stylesheets="@styles.css" text="x"
-                        textAlignment="CENTER">
+                <Button fx:id="closeButton" alignment="CENTER" mnemonicParsing="false" onMouseClicked="#close" prefHeight="35.0" prefWidth="35.0" styleClass="closeBtn" stylesheets="@styles.css" text="x" textAlignment="CENTER">
                 </Button>
             </children>
         </HBox>
-        <TextField fx:id="outputBox" layoutX="80.0" layoutY="73.0" prefHeight="40.0" prefWidth="380.0"
-                   promptText="your regex will appear here" styleClass="outputBox" stylesheets="@styles.css"/>
-        <Button fx:id="copyButton" layoutX="460.0" layoutY="73.0" mnemonicParsing="false" prefHeight="40.0"
-                prefWidth="40.0" styleClass="copyBtn" stylesheets="@styles.css"
-                text="cp"/>
-        <Button fx:id="alphaButton" layoutX="163.0" layoutY="143.0" mnemonicParsing="false" prefHeight="55.0"
-                prefWidth="55.0"
-                styleClass="inputBtn" stylesheets="@styles.css" text="aA">
+        <TextField fx:id="outputBox" layoutX="80.0" layoutY="73.0" prefHeight="40.0" prefWidth="380.0" promptText="your regex will appear here" styleClass="outputBox" stylesheets="@styles.css" />
+        <Button fx:id="copyButton" layoutX="460.0" layoutY="73.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" styleClass="copyBtn" stylesheets="@styles.css" text="cp" />
+        <Button fx:id="alphaButton" layoutX="163.0" layoutY="143.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="55.0" styleClass="inputBtn" stylesheets="@styles.css" text="aA">
             <font>
-                <Font size="16.0"/>
+                <Font size="16.0" />
             </font>
         </Button>
-        <Button fx:id="numButton" alignment="CENTER" layoutX="80.0" layoutY="143.0" mnemonicParsing="false"
-                prefHeight="55.0" prefWidth="55.0"
-                styleClass="inputBtn" stylesheets="@styles.css" text="01">
+        <Button fx:id="numButton" alignment="CENTER" layoutX="80.0" layoutY="143.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="55.0" styleClass="inputBtn" stylesheets="@styles.css" text="01">
             <font>
-                <Font size="16.0"/>
+                <Font size="16.0" />
             </font>
         </Button>
-        <Button fx:id="symbolsButton" layoutX="245.0" layoutY="143.0" mnemonicParsing="false" prefHeight="55.0"
-                prefWidth="55.0"
-                styleClass="inputBtn" stylesheets="@styles.css" text=".#*">
+        <Button fx:id="symbolsButton" layoutX="245.0" layoutY="143.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="55.0" styleClass="inputBtn" stylesheets="@styles.css" text=".#*">
             <font>
-                <Font size="16.0"/>
+                <Font size="16.0" />
             </font>
         </Button>
-        <Button fx:id="spaceButton" layoutX="329.0" layoutY="143.0" mnemonicParsing="false" prefHeight="55.0"
-                prefWidth="55.0"
-                styleClass="inputBtn" stylesheets="@styles.css" text="_">
+        <Button fx:id="spaceButton" layoutX="329.0" layoutY="143.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="55.0" styleClass="inputBtn" stylesheets="@styles.css" text="_">
             <font>
-                <Font size="16.0"/>
+                <Font size="16.0" />
             </font>
         </Button>
-        <Button fx:id="generateButton" alignment="CENTER" defaultButton="true" layoutX="406.0" layoutY="143.0"
-                mnemonicParsing="false" prefHeight="55.0" prefWidth="95.0"
-                styleClass="generateBtn" stylesheets="@styles.css" text="generate">
+        <Button fx:id="generateButton" alignment="CENTER" defaultButton="true" layoutX="406.0" layoutY="143.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="95.0" styleClass="generateBtn" stylesheets="@styles.css" text="generate">
             <font>
-                <Font size="16.0"/>
+                <Font size="16.0" />
             </font>
         </Button>
     </children>
