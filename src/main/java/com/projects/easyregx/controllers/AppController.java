@@ -8,17 +8,29 @@ import javafx.stage.Stage;
 
 public class AppController {
 
-    // Scene elements
+    // Window elements
     @FXML
     private HBox hBox;
     @FXML
     private Button closeButton;
     @FXML
     private Button minimizeButton;
+
+    // App elements
     @FXML
     private TextField outputBox;
     @FXML
     private Button copyButton;
+    @FXML
+    private Button numButton;
+    @FXML
+    private Button alphaButton;
+    @FXML
+    private Button symbolButton;
+    @FXML
+    private Button spaceButton;
+    @FXML
+    private Button generateButton;
 
     // Current position of the stage
     private double posX = 0;
