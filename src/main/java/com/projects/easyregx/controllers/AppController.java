@@ -36,6 +36,10 @@ public class AppController {
     private double posX = 0;
     private double posY = 0;
 
+    //TODO tasks:
+    // - change buttons to ToggleButtons
+    // - implement a generate method and bootstrap it
+
     @FXML
     public void handleStageDrag() {
         Stage stage = (Stage) hBox.getScene().getWindow();
