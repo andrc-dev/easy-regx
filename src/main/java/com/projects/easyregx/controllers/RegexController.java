@@ -3,18 +3,13 @@ package com.projects.easyregx.controllers;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.HBox;
-import javafx.stage.Stage;
 
-public class OptionsController {
+public class RegexController {
 
-    // Scene elements
     @FXML
     private TextField outputBox;
     @FXML
     private Button copyButton;
-
-    // Input Buttons
     @FXML
     private Button numButton;
     @FXML
@@ -25,5 +20,9 @@ public class OptionsController {
     private Button spaceButton;
     @FXML
     private Button generateButton;
+
+    public void method() {
+        // code here
+    }
 
 }
