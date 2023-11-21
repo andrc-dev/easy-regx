@@ -1,4 +1,4 @@
-package com.projects.easyregx;
+package com.projects.easyregx.controllers;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -6,11 +6,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 
-public class Controller {
-
-    // Current position of the stage
-    private double posX = 0;
-    private double posY = 0;
+public class AppController {
 
     // Scene elements
     @FXML
@@ -24,17 +20,9 @@ public class Controller {
     @FXML
     private Button copyButton;
 
-    // Input Buttons
-    @FXML
-    private Button alphaButton;
-    @FXML
-    private Button numButton;
-    @FXML
-    private Button symbolButton;
-    @FXML
-    private Button spaceButton;
-    @FXML
-    private Button generateButton;
+    // Current position of the stage
+    private double posX = 0;
+    private double posY = 0;
 
     @FXML
     public void handleStageDrag() {
