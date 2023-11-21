@@ -9,11 +9,11 @@ import javafx.stage.StageStyle;
 
 import java.io.IOException;
 
-public class Main extends Application {
+public class App extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        Parent loader = FXMLLoader.load(getClass().getResource("hello-view.fxml"));
+        Parent loader = FXMLLoader.load(getClass().getResource("app-view.fxml"));
         Scene scene = new Scene(loader, 600, 250);
         stage.setTitle("EasyRegx");
         stage.initStyle(StageStyle.UNDECORATED);
