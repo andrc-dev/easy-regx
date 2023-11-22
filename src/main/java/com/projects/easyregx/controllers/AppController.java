@@ -41,6 +41,12 @@ public class AppController {
     // - implement a generate method and bootstrap it
 
     @FXML
+    public void generate() {
+        // logic here
+        System.out.println("Generate button clicked.");
+    }
+
+    @FXML
     public void handleStageDrag() {
         Stage stage = (Stage) hBox.getScene().getWindow();
 
