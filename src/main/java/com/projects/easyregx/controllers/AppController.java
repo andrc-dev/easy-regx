@@ -47,7 +47,11 @@ public class AppController {
     public void generate() {
         String expression;
 
-        if (numButton.isSelected()) {
+        if (numButton.isSelected() && alphaButton.isSelected() && spaceButton.isSelected()) {
+            expression = regxGen.createRegex(RxOptions.ALPHANUMERICS_AND_SPACE);
+        } else if (numButton.isSelected() && alphaButton.isSelected()) {
+            expression = regxGen.createRegex(RxOptions.ALPHANUMERICS);
+        } else if (numButton.isSelected()) {
             expression = regxGen.createRegex(RxOptions.NUMBERS);
         } else if (alphaButton.isSelected()) {
             expression = regxGen.createRegex(RxOptions.LETTERS);
@@ -60,16 +64,15 @@ public class AppController {
         }
 
         outputBox.setText(expression);
-        //deselectButtons();
+        deselectButtons();
     }
 
-    /*
     private void deselectButtons() {
-        for (ToggleButton button : buttons) {
-            button.setSelected(false);
-        }
+        numButton.setSelected(false);
+        alphaButton.setSelected(false);
+        symbolsButton.setSelected(false);
+        spaceButton.setSelected(false);
     }
-    */
 
     @FXML
     public void handleStageDrag() {
