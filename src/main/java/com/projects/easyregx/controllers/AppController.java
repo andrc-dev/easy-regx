@@ -3,6 +3,7 @@ package com.projects.easyregx.controllers;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.control.ToggleButton;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 
@@ -22,13 +23,13 @@ public class AppController {
     @FXML
     private Button copyButton;
     @FXML
-    private Button numButton;
+    private ToggleButton numButton;
     @FXML
-    private Button alphaButton;
+    private ToggleButton alphaButton;
     @FXML
-    private Button symbolButton;
+    private ToggleButton symbolButton;
     @FXML
-    private Button spaceButton;
+    private ToggleButton spaceButton;
     @FXML
     private Button generateButton;
 

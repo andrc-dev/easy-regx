@@ -83,9 +83,9 @@
     -fx-font-family: "Roboto Mono Bold";
     -fx-font-size: 14;
 }
-.inputBtn:pressed {
+.inputBtn:selected {
     -fx-background-color: #1A1A1A;
-    -fx-border-color: #2E2E2E;
+    -fx-border-color: #9BF9FF; // alternative: #2E2E2E
     -fx-background-radius: 5px;
     -fx-text-fill: #9BF9FF;
     -fx-font-family: "Roboto Mono Bold";
