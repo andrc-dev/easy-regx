@@ -1,5 +1,7 @@
 package com.projects.easyregx.controllers;
 
+import com.projects.easyregx.models.RegxGen;
+import com.projects.easyregx.models.RxOptions;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
@@ -8,6 +10,8 @@ import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 
 public class AppController {
+
+    private RegxGen regxGen = RegxGen.getInstance();
 
     // Window elements
     @FXML
@@ -27,25 +31,45 @@ public class AppController {
     @FXML
     private ToggleButton alphaButton;
     @FXML
-    private ToggleButton symbolButton;
+    private ToggleButton symbolsButton;
     @FXML
     private ToggleButton spaceButton;
     @FXML
     private Button generateButton;
 
+    //private ToggleButton[] buttons = {numButton, alphaButton, symbolsButton, spaceButton}; // null buttons
+
     // Current position of the stage
     private double posX = 0;
     private double posY = 0;
 
-    //TODO tasks:
-    // - change buttons to ToggleButtons
-    // - implement a generate method and bootstrap it
-
     @FXML
     public void generate() {
-        // logic here
-        System.out.println("Generate button clicked.");
+        String expression;
+
+        if (numButton.isSelected()) {
+            expression = regxGen.createRegex(RxOptions.NUMBERS);
+        } else if (alphaButton.isSelected()) {
+            expression = regxGen.createRegex(RxOptions.LETTERS);
+        } else if (symbolsButton.isSelected()) {
+            expression = regxGen.createRegex(RxOptions.SYMBOLS);
+        } else if (spaceButton.isSelected()) {
+            expression = regxGen.createRegex(RxOptions.SPACE);
+        } else {
+            expression = "Select at least one option.";
+        }
+
+        outputBox.setText(expression);
+        //deselectButtons();
     }
+
+    /*
+    private void deselectButtons() {
+        for (ToggleButton button : buttons) {
+            button.setSelected(false);
+        }
+    }
+    */
 
     @FXML
     public void handleStageDrag() {

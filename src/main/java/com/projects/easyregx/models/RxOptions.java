@@ -1,9 +1,17 @@
 package com.projects.easyregx.models;
 
 public enum RxOptions {
-    ONLY_NUMBERS,
-    ONLY_LETTERS,
-    ONLY_SYMBOLS,
-    SPACE,
-    ALPHANUMERIC
+    NUMBERS("0-9"),
+    LETTERS("a-zA-Z"),
+    SYMBOLS("^~"),
+    SPACE(" ");
+
+    private String string;
+    RxOptions(String s) {
+        this.string = s;
+    }
+
+    public String getValue() {
+        return string;
+    }
 }

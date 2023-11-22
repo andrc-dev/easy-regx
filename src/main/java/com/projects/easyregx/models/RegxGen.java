@@ -15,7 +15,7 @@ public class RegxGen {
         return INSTANCE;
     }
 
-    public String generate() {
-        return "/regex-text/";
+    public String createRegex(RxOptions rxOptions) {
+        return "/^[" + rxOptions.getValue() + "]*$/";
     }
 }
