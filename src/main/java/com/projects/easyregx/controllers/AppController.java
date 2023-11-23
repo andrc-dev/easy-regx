@@ -1,7 +1,6 @@
 package com.projects.easyregx.controllers;
 
 import com.projects.easyregx.models.RegxGen;
-import com.projects.easyregx.models.RxOptions;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
@@ -45,26 +44,28 @@ public class AppController {
 
     @FXML
     public void generate() {
-        String expression;
-
-        if (numButton.isSelected() && alphaButton.isSelected() && spaceButton.isSelected()) {
-            expression = regxGen.createRegex(RxOptions.ALPHANUMERICS_AND_SPACE);
-        } else if (numButton.isSelected() && alphaButton.isSelected()) {
-            expression = regxGen.createRegex(RxOptions.ALPHANUMERICS);
-        } else if (numButton.isSelected()) {
-            expression = regxGen.createRegex(RxOptions.NUMBERS);
-        } else if (alphaButton.isSelected()) {
-            expression = regxGen.createRegex(RxOptions.LETTERS);
-        } else if (symbolsButton.isSelected()) {
-            expression = regxGen.createRegex(RxOptions.SYMBOLS);
-        } else if (spaceButton.isSelected()) {
-            expression = regxGen.createRegex(RxOptions.SPACE);
-        } else {
-            expression = "Select at least one option.";
-        }
-
-        outputBox.setText(expression);
+        outputBox.setText(regxGen.createRegex(getSelectedButtons()));
         deselectButtons();
+    }
+
+    public String getSelectedButtons() {
+        if (numButton.isSelected() && alphaButton.isSelected() && symbolsButton.isSelected() && spaceButton.isSelected()) {
+            return "all";
+        } else if (numButton.isSelected() && alphaButton.isSelected() && spaceButton.isSelected()) {
+            return "alphanum+space";
+        } else if (numButton.isSelected() && alphaButton.isSelected()) {
+            return "alphanum";
+        } else if (numButton.isSelected()) {
+            return "num";
+        } else if (alphaButton.isSelected()) {
+            return "letters";
+        } else if (symbolsButton.isSelected()) {
+            return "symbols";
+        } else if (spaceButton.isSelected()) {
+            return "space";
+        } else {
+            return "none";
+        }
     }
 
     private void deselectButtons() {
