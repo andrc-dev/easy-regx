@@ -36,11 +36,13 @@ public class AppController {
     @FXML
     private Button generateButton;
 
-    //private ToggleButton[] buttons = {numButton, alphaButton, symbolsButton, spaceButton}; // null buttons
-
     // Current position of the stage
     private double posX = 0;
     private double posY = 0;
+
+    //TODO musts:
+    // - implement a method for the copy button
+    // - incorporate fontawesome icons (add dependency to maven)
 
     @FXML
     public void generate() {
