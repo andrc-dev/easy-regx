@@ -73,6 +73,9 @@
     //-fx-border-radius: 0;
     -fx-font-family: "Roboto Mono Bold";
 }
+.copyIcon {
+    -fx-fill: #4F4F4F;
+}
 
 // Input Buttons
 .inputBtn {

@@ -61,7 +61,6 @@ public class AppController {
             content.putString(outputBox.getText());
             clipboard.setContent(content);
         }
-
     }
 
     public String getSelectedButtons() {
