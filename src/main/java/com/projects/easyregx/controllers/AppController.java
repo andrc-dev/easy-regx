@@ -5,6 +5,8 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleButton;
+import javafx.scene.input.Clipboard;
+import javafx.scene.input.ClipboardContent;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 
@@ -41,13 +43,25 @@ public class AppController {
     private double posY = 0;
 
     //TODO musts:
-    // - implement a method for the copy button
     // - incorporate fontawesome icons (add dependency to maven)
 
     @FXML
     public void generate() {
         outputBox.setText(regxGen.createRegex(getSelectedButtons()));
         deselectButtons();
+    }
+
+    @FXML
+    public void copyRxToClipboard() {
+        Clipboard clipboard = Clipboard.getSystemClipboard();
+        ClipboardContent content = new ClipboardContent();
+        clipboard.clear();
+
+        if (outputBox.getText().startsWith("/")) {
+            content.putString(outputBox.getText());
+            clipboard.setContent(content);
+        }
+
     }
 
     public String getSelectedButtons() {

@@ -30,8 +30,9 @@
         </HBox>
         <TextField fx:id="outputBox" layoutX="80.0" layoutY="73.0" prefHeight="40.0" prefWidth="380.0"
                    promptText="your regex will appear here" styleClass="outputBox" stylesheets="@styles.css"/>
-        <Button fx:id="copyButton" layoutX="460.0" layoutY="73.0" mnemonicParsing="false" prefHeight="40.0"
-                prefWidth="40.0" styleClass="copyBtn" stylesheets="@styles.css" text="cp"/>
+        <Button fx:id="copyButton" layoutX="460.0" layoutY="73.0" mnemonicParsing="false"
+                onMouseClicked="#copyRxToClipboard" prefHeight="40.0" prefWidth="40.0" styleClass="copyBtn"
+                stylesheets="@styles.css" text="cp"/>
         <ToggleButton fx:id="numButton" alignment="CENTER" layoutX="80.0" layoutY="143.0" mnemonicParsing="false"
                       prefHeight="55.0" prefWidth="55.0" styleClass="inputBtn" stylesheets="@styles.css" text="01"/>
         <ToggleButton fx:id="alphaButton" layoutX="163.0" layoutY="143.0" mnemonicParsing="false" prefHeight="55.0"
